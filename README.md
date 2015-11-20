@@ -9,6 +9,6 @@ Convert binary data (unsigned char*) into a hexidecimal string
 $ clib install pepaslabs/hexify.c
 ```
 
-# License
+## License
 
 [MIT](https://opensource.org/licenses/MIT)
