@@ -24,17 +24,24 @@ cd /tmp
 cat > main.c << 'EOF'
 #include <stdlib.h>
 #include <stdio.h>
+
 #include "hexify/hexify.h"
 
 int main(int argc, char **argv) {
+    // pack a binary array
     unsigned char binary[4];
     binary[0] = 0xde;
     binary[1] = 0xad;
     binary[2] = 0xbe;
     binary[3] = 0xef;
+
+    // convert it into a hex string
     char hex[8+1];
-    hexify(binary, sizeof(binary), hex, sizeof(hex));    
+    hexify(binary, sizeof(binary), hex, sizeof(hex));
+
+    // print the result
     printf("%s\n", hex);
+
     return EXIT_SUCCESS;
 }
 EOF
